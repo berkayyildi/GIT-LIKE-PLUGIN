@@ -1,13 +1,16 @@
-<?php
+﻿<?php
 /*
 Plugin Name: Like Counter
 Plugin URI: https://berkayyildiz.tk
 Description: Like Counter Description
-Version: 1.0
+Version: 1.1
 Author: Berkay YILDIZ
 Author URI: https://berkayyildiz.tk
 License: GNU
 */
+
+require_once( plugin_dir_path( __FILE__ ) . '/like-plugin.php'); //Plugin Dosyasını Yükle
+require_once( plugin_dir_path( __FILE__ ) . '/functions.php'); //Plugin Dosyasını Yükle
 
 function style_and_script_loader() {
   wp_register_style('style_and_script_loader', plugins_url('like-counter.css',__FILE__ ));
