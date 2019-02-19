@@ -7,5 +7,10 @@ function getPostNameWithId($post_id){
 
 }
 
+function getNameOfTagWithId($tag_id){
+    
+    return get_term_by('term_id',$tag_id,'post_tag')->name;
+
+}
 
 ?>

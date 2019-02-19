@@ -71,7 +71,7 @@ class My_Top_Ten_Widget extends WP_Widget {
 			$table_name = $wpdb->prefix . "like_counter";
 			
 			//En çok beğeni alan 10 post un id ve beğeni sayılarını çek
-			$result = $wpdb->get_results("SELECT post_id, count(*) AS count
+			$result = $wpdb->get_results("	SELECT post_id, count(*) AS count
 											FROM $table_name
 											GROUP BY post_id
 											ORDER BY count(*) DESC
@@ -81,13 +81,13 @@ class My_Top_Ten_Widget extends WP_Widget {
 			echo "<table>"; 
 			echo "<tr>"; 
 			echo "<th>Post</th>"; 
-			if ($checkbox) {echo "<th>Like</th>"; }
+			if ($checkbox) {echo "<th>Like</th>"; }	//Checkbox işaretli ise beğeni sayısını göster
 			echo "</tr>"; 
 			foreach ($result as $details) {
 					$postsay++;
 					echo "<tr>"; 
 						echo "<td>" . getPostNameWithId($details->post_id) . "</td>"; 
-						if ($checkbox) { echo "<td>" . $details->count . "</td>"; }
+						if ($checkbox) { echo "<td>" . $details->count . "</td>"; }	//Checkbox işaretli ise beğeni sayısını göster
 					echo "</tr>"; 
 			}
 			echo "</table>"; 
