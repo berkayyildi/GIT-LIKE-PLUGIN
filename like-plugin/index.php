@@ -15,6 +15,7 @@ require_once( plugin_dir_path( __FILE__ ) . '/adminpage.php'); //Plugin Dosyası
 
 add_action( 'init','style_and_script_loader');  //JS vs CSS dosyalarını ekle
 function style_and_script_loader() {
+  wp_enqueue_script( 'jquery' );
   wp_register_style('style_and_script_loader', plugins_url('like-counter.css',__FILE__ ));
   wp_enqueue_style('style_and_script_loader');
 }

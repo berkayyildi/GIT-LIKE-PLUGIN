@@ -10,7 +10,7 @@ WP Like Plugin created to help admins to analyze which tag attracts users more.
 # Installation
 
 To install wordpress plugin is the same with standard wordpress plugin installation.
-You just need to connect your web server with FTP, find your wordpress directory copy plugin folder inside to
+You just need to find your wordpress directory copy like-plugin folder inside to
 **\wp-content\plugins** folder.
 Then open wordpress admin panel click Plugins you should see **Like Counter** plugin there.
-Click activate button. You successfully install the plugin.
+Click activate button. You successfully installed the plugin.

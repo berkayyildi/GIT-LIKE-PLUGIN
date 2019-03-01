@@ -21,10 +21,11 @@ function benim_eklentim_yonetim(){  //Yönetim Paneli Ayarları
     echo "
     <h1>Liker Counter Management Page</h1>
     <form method='post'>
-    <label> Number of Tag per page to show:</label>
+    <label>Tag per page:</label>
     ";
     wp_nonce_field('benim_eklentim_update','benim_eklentim_update'); 
     $opt_yazisonu = get_option('numoftagpp');
+    if(!$opt_yazisonu){$opt_yazisonu = 10;}
     echo"
     <input type='text' maxlength='2'  size='2' name='numoftagpp' value='$opt_yazisonu'>
     <input type='hidden' name='action' value='guncelle'>
@@ -61,6 +62,7 @@ function benim_eklentim_yonetim(){  //Yönetim Paneli Ayarları
       arsort($values);
       $popular = array_slice(array_keys($values), (0 + ($pagination * $tagperpage)), ($tagperpage), true);  //Kackezkectigi : tag_id şeklinde oluşturur
   
+      if(!$popular){die("<br><b>No liked tags can be list!</b>");}
   
       echo "<table>";
       echo "<tr>";
