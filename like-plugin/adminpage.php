@@ -98,14 +98,7 @@ function benim_eklentim_yonetim(){  //Yönetim Paneli Ayarları
           echo '<meta http-equiv="refresh" content="1">';
         }
       }
-  
-    add_filter( 'rest_endpoints', function( $endpoints ){
-      if( isset( $endpoints['/wp/v2/tags'][0]['args']['per_page']['maximum'] ) )
-          $endpoints['/wp/v2/tags'][0]['args']['per_page']['maximum'] = 120;
-  
-      return $endpoints;  
-    } );
-  
+
   
   
   } //Yönetim Paneli Fonksiyonu Bitiş
