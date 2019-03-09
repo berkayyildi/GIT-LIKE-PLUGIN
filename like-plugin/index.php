@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Plugin Name: Like Counter
 Plugin URI: https://github.com/berkayyildi/Wordpress-Like-Plugin
